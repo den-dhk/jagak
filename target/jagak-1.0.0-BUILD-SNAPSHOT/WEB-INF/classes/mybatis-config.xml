@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <!--typeAlias alias="BoardDto" type="com.ducks.jagak.domain.BoardDto"/-->
+        <typeAlias alias="BoardDto" type="com.ducks.jagak.domain.BoardDto"/>
+        <typeAlias alias="SearchCondition" type="com.ducks.jagak.domain.SearchCondition"/>
     </typeAliases>
 </configuration>
