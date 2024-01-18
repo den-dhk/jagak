@@ -21,11 +21,11 @@ public class SearchCondition {
         this(page, pageSize, "", "");
     }
 
-    public SearchCondition(Integer page, Integer pageSize, String option, String keyword) {
+    public SearchCondition(Integer page, Integer pageSize, String keyword, String option) {
         this.page = page;
         this.pageSize = pageSize;
-        this.option = option;
         this.keyword = keyword;
+        this.option = option;
     }
 
     public String getQueryString() {
@@ -85,8 +85,9 @@ public class SearchCondition {
         return "SearchCondition{" +
                 "page=" + page +
                 ", pageSize=" + pageSize +
-                ", option='" + option + '\'' +
+                ", offset=" + getOffset() +
                 ", keyword='" + keyword + '\'' +
+                ", option='" + option + '\'' +
                 '}';
     }
 }
