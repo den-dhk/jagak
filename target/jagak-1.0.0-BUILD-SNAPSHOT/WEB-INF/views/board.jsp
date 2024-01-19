@@ -82,7 +82,7 @@
     </ul>
 </div>
 <script>
-    let msg = "${msg}"; 
+    let msg = "${msg}";
     if(msg=="WRT_ERR") alert("게시물 등록에 실패하였습니다. 다시 시도해 주세요.");
     if(msg=="MOD_ERR") alert("게시물 수정에 실패하였습니다. 다시 시도해 주세요.");
 </script>
