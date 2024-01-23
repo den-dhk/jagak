@@ -26,7 +26,10 @@ public class CommentController {
 
     // 댓글을 수정하는 메서드
     @PatchMapping("/comments/{cno}")
-    public ResponseEntity<String> modify(@PathVariable Integer cno, @RequestBody CommentDto dto) {
+    public ResponseEntity<String> modify(@PathVariable Integer cno, @RequestBody CommentDto dto, HttpSession session) {
+        //        String commenter = (String)session.getAttribute("id");
+        String commenter = "asdf";
+        dto.setCommenter(commenter);
         dto.setCno(cno);
         System.out.println("dto = " + dto);
 
@@ -49,7 +52,7 @@ public class CommentController {
 //    }
 
     // 댓글을 등록하는 메서드
-    @PostMapping("/comments")
+    @PostMapping("/comments")       // jagak/comments?bno=422
     public ResponseEntity<String> write(@RequestBody CommentDto dto, Integer bno, HttpSession session) {
     //        String commenter = (String)session.getAttribute("id");
         String commenter = "asdf";
